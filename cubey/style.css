@@ -1,0 +1,194 @@
+:root{
+  --Size:80em;
+  --IMG:./carpenterwNail.png;
+  --initValue:0deg;
+  --perspect:650px;
+  --f-shadow:inset 1 0 1 1px rgba(0, 0, 0, 0.8);
+  --Xdeg:0deg;
+  --Ydeg:0deg;
+  --Zdeg:0deg;
+  --DDG:var(--Xdeg)+0deg;
+--BgColor:rgba(100,100,100,0.8);
+}
+body{
+  background-color:var(--BgColor);
+}
+img{
+  object-fit:contain;
+}
+.imgtxt{
+  position: absolute;
+  font-size: 20px;
+  color: #060700;
+  text-decoration-style: solid;
+  -moz-text-decoration-style: solid;
+  background: #cccccc;
+    background-size:contain;
+}
+#tridiv {
+ 
+  perspective: var(--perspect);
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+  background:  transparent ;
+  font-size: 12.5%;
+}
+.face {
+  box-shadow: var(--f-shadow)
+}
+.scene, .shape, .face, .face-wrapper, .cr {
+  position: absolute;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+.scene {
+    width:80em;
+    height: 80em;
+    top: 50%;
+    left: 50%;
+    margin: -40em 0 0 -40em;
+
+  
+    transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));
+    -webkit-transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));
+    -moz-transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));
+    -ms-transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));
+    -o-transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));
+    transform-origin: center;
+}
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+}
+.face, .face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+.face {
+  background-size:100%;
+  background-position: center;
+  background-color: black;
+/*  background-image:  linear-gradient(rgb(157, 189, 242) 13%, rgb(95, 175, 159) 42%, rgb(219, 221, 70) 71%); */
+}
+#img{
+width:100%;
+Height:100%;
+background-color:transparent;
+box-shadow:inset 2px 2px 10px black;
+}
+.face-wrapper .face {
+  left: 100%;
+  top:50%;
+  width: 50%;
+  height: 50%
+}
+.photon-shader {
+  position: absolute;
+  background-color: rgba(0, 100,0, 0.008);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+.side {
+  left: 50%;
+}
+.cr, .cr .side {
+  height: 100%;
+}
+[class*="cuboid"]{
+    background-color: yellow;
+    /*Safari3-8*/transform: rotateY(var(--Ydeg));
+    -webkit-transform: rotateY(var(--Ydeg));
+    -moz-transform: rotateY(var(--Ydeg));
+    -ms-transform: rotateY(var(--Ydeg));
+    -o-transform: rotateY(var(--Ydeg));
+    transform-origin: center;
+}
+[class*="cuboid"] .ft, [class*="cuboid"] .bk {
+  width: 100%;
+  height: 100%;
+}
+[class*="cuboid"] .bk {
+  left: 100%;
+}
+[class*="cuboid"] .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+  -webkit-transform: rotateY(-90deg) translateX(-50%);
+  -moz-transform: rotateY(-90deg) translateX(-50%);
+  -ms-transform: rotateY(-90deg) translateX(-50%);
+  -o-transform: rotateY(-90deg) translateX(-50%);
+}
+[class*="cuboid"] .lt {
+  transform: rotateY(90deg) translateX(-50%);
+  -webkit-transform: rotateY(90deg) translateX(-50%);
+  -moz-transform: rotateY(90deg) translateX(-50%);
+  -ms-transform: rotateY(90deg) translateX(-50%);
+  -o-transform: rotateY(90deg) translateX(-50%);
+}
+[class*="cuboid"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+  -webkit-transform: rotateX(90deg) translateY(-50%);
+  -moz-transform: rotateX(90deg) translateY(-50%);
+  -ms-transform: rotateX(90deg) translateY(-50%);
+  -o-transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cuboid"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+  -webkit-transform: rotateX(-90deg) translateY(-50%);
+  -moz-transform: rotateX(-90deg) translateY(-50%);
+  -ms-transform: rotateX(-90deg) translateY(-50%);
+  -o-transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cuboid"] .lt {
+  left: 100%;
+}
+[class*="cuboid"] .bm {
+  top: 100%;
+}
+/* .cub-1 styles */
+.cub-1 {
+  transform:translate3D(0em, 0em, 0em) rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));
+  opacity:1;
+  width:30em;
+  height:30em;
+  margin:-15em 0 0 -15em;
+}
+.cub-1 .ft {
+  transform:translateZ(15em);
+}
+.cub-1 .bk {
+  transform:translateZ(-15em) rotateY(180deg);
+}
+.cub-1 .rt, .cub-1 .lt {
+  width:30em;
+  height:30em;
+}
+.cub-1 .tp, .cub-1 .bm {
+  width:30em;
+  height:30em;
+}
+.cub-1 .face {
+  background-color:#FFFFFF;
+}
+.button{
+  border: 0px;
+  margin: 0 auto;
+  padding:0;
+  text-align:  center;
+  text-decoration-color:blueviolet;
+  font-size: 30px;
+  background-color: brown;
+  width:100%;
+  height:150px;
+  bottom:0;
+  -moz-text-decoration-color:blueviolet;
+}

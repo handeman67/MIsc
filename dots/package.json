@@ -1,0 +1,22 @@
+{
+  "name": "dotsgame",
+  "version": "1.0.0",
+  "description": "instaling the functions into the switch statement, connnect the mechanincs of eexisting functions",
+  "main": "./js/start.js",
+  "scripts": {
+    "start": "index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mathjs": "^6.0.1",
+    "babel": "^6.23.0",
+    "favicon": "0.0.2",
+    "jsdom": "^15.1.1",
+    "quokka": "0.0.7"
+  },
+  "devDependencies": {
+    "wallabify": "0.0.15"
+  }
+}

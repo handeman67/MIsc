@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+  <title>Cubey</title>
+</head>
+<body id="body" oncanplaythrough="myFuction()">
+  
+  <br> 
+   <input type="range" min="-180" max="180" value="var(--initValue)"  onchange="rotate(this.value)" />
+   RotateY:(<span id="span1">var(--initValue)</span>);
+   
+   <br> 
+   <input type="range" min="-180" max="180" value="var(--initValue)" onchange="rotate1(this.value)" />
+   RotateX:(<span id="span2">var(--initValue)</span>);
+ 
+  <br> 
+   <input type="range" min="-180" max="180" value="var(--initValue)" onchange="rotate2(this.value)"  />
+   RotateZ: (<span id="span3">var(--initValue)</span>);
+ 
+   <br> 
+   <input type="range" min="-180" max="180" value="var(--Size)" onchange="Size(this.value)" />
+   Size:  size(<span id="span4">var(--Size)</span> <span id="span5">var(--Size)</span>);
+ 
+ 
+   
+   <div class="result value6 ">
+     HEX value: <input id="chosen-value6" value="000000" autocomplete="off">
+     <button class="jscolor 
+     {valueElement:'chosen-value6',onFineChange:'setColor6(this)', styleElement:'face',styleElement:'body'} jscolor-active">
+     Backgroumd
+     </button>
+   </div>
+ 
+ 
+ <div id="view3d">
+   <div id="tridiv">
+   <div class="scene "id="div1" >
+     <div class="shape cuboid-1 cub-1">
+       <div class="face ft">
+         <div class="photon-shader" ><a id="mg1"href="#mg2"><h1 class="imgtxt">Curious</h1></a><img id='img1' src="https://i1.wp.com/www.nationalreview.com/wp-content/uploads/2019/01/trump.jpg"width="400px" alt=""></div>
+       </div>
+       <div class="face bk">
+         <div class="photon-shader" ><a id="mg2"href="#mg3"><h1 class="imgtxt">Its A Bug</h1></a><img id='img2' src="https://images.axios.com/Ak3HC-ZWTWOLOqgmlpNodYNBLw0=/0x71:4291x2485/1024x576/2019/01/05/1546707506731.jpg"width="400px" alt=""></div>
+       </div>
+       <div class="face rt">
+         <div class="photon-shader" ><a id="mg3"href="#mg4"><h1 class="imgtxt">Nature</h1></a><img id='img3' src="https://compote.slate.com/images/e0e463fd-f2c4-4837-91e9-ac87e00072f9.jpeg" width="400px"alt=""></div>
+       </div>
+       <div class="face lt">
+         <div class="photon-shader" ><a id="mg4"href="#mg5"><h1 class="imgtxt">Ever Since the Dentist</h1></a><img id='img4' src="https://e3.365dm.com/18/08/1600x900/skynews-donald-trump-google_4405491.jpg"width="400px" alt=""></div>
+       </div>
+       <div class="face bm">
+         <div class="photon-shader" ><a id="mg5"href="#mg6"><h1 class="imgtxt">Pole</h1></a><img id='img5' src="https://specials-images.forbesimg.com/imageserve/5babef3da7ea4342a948c024/416x416.jpg"width="200px" alt=""></div>
+       </div>
+       <div class="face tp">
+         <div class="photon-shader" ><a id="mg6"href="#mg1"><h1 class="imgtxt">GrayScale</h1></a><img id='img6' src="https://placeimg.com/300/300/arch/greyscale" alt=""></div>
+       </div>
+     </div>
+   </div>
+ </div></div>
+ <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+ <script src="./jscolor.js"></script>
+ </body>
+</html>

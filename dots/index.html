@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preload" href="./js/start.js" as="script" >
+  <link rel="icon" href="./favicon.ico">
+  <title>Document</title>
+</head>
+<body onload= " getScript('../js/libraries.json'),getScript('../js/script.json')">
+  <div id="wrap" class="wrap">
+    <header id='head' class="head">
+      <form id="formHead">     
+      <input id="myinput" type="text" value="today" class="myinput">
+      <span>choose grid size -
+        <input id="hdinput" type="number" value="20"></span>
+       
+    
+      <span id="para" class="para"></span>
+     
+        <div class='range-slider' id='rangeslider'>
+          <input class="range-slider__range" id="rsvalue" type="range" min="-255" max="255" value="-30" step="1">
+          <span class="range-slider__value"  id="rsoutput" value="">0</span>
+      
+  </div>
+  <div class='range-slider1' id='rangeslider1'>
+      <input class="range-slider__range1" id="rsvalue1" type="range" min="-360" max="360" value="30">
+      <span class="range-slider__value1"  id="rsoutput1" value="">0</span>
+  
+</div>
+  </form>
+  </header> 
+  <div id="can"></div>
+  <p id="demo">
+
+  </p>
+  </div>
+  </body>
+ <script>
+  
+        </script>
+<script src="./js/start.js"></script>
+<link rel="stylesheet" href="src/css/style.css">
+
+</html>
