@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(189, 187, 76);
+    --size: 0px;
+    --randomnum:calc(Math.random()*100);
+    
+  }
+  body *{
+    box-shadow:1px, 1px, 5px, 15px black;
+  }
+  .app {
+    position: absolute;
+    display: grid;
+    grid-template-columns: masonry;
+    grid-template-rows: masonry;
+    /* display: flex;
+    flex-wrap: wrap; */
+    top: 1em;
+    left: 1em;
+    right: 1em;
+    bottom: 1em;
+    background-color:rgb(189, 187, 76);
+    
+    /* overflow: hidden; */
+    
+    align-items: center;
+    justify-items:center;
+  
+  }
+  div {
+    border: 2px solid black;
+  }
+  .box {
+    border-radius: 50%;
+    border:1px solid rgb(189, 187, 76);
+   
+  }
+  
+  .box:hover {
+   background-color:green;
+
+  }
+  .box:nth-child(odd) {
+    
+    animation: clor 1s ease  infinite alternate;
+   }
+  .box:nth-child(even) {
+   animation-delay: var(--randomnum);
+   animation: grow 1s ease  infinite alternate;
+  }
+  @keyframes grow{
+    to{
+      width:25px;
+      height:25px;
+      transition:var(--randomnum)s;
+    }
+  }
+  @keyframes clor{
+    to{
+      background-color: rgb(189, 187, 76);
+      height:10px;
+      box-shadow:1px, 1px, 15px, 5px black;
+    }
+  }

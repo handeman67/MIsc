@@ -1,0 +1,165 @@
+body * {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+body {
+  margin: 0 auto;
+  background: #0009;
+  overflow: hidden;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  transition:all 0.1s ease
+}
+
+/* .mainWrap,.colorWheel,.dial,.circleInner,.clock,.innerWrap,.numbers,.section{
+  position: absolute;
+  transform-origin: center;
+  display:flex;
+  margin:0 auto;
+} */
+.mainWrap {
+  --clradius:-50%;
+  --size: 50vw;
+  --size2: 30vw;
+  --t:transparent;
+  --numrot:0deg;
+  --numV:0deg;
+  --numH:0deg;
+  --alpha:1;
+  --alpha1:1;
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+}
+
+.innerWrap {
+  position: absolute;
+  display:grid ;
+  place-content: center;
+  position: absolute;
+  background: transparent;
+
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  bottom: 1em;
+}
+
+.dial,.circleInner {
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.section,.clock{
+  position: absolute;
+  
+}
+.dial {
+  display: block;
+  background-color: transparent;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 12px double #0005;
+  box-shadow: 1px 1px 15px #000; 
+ 
+}
+
+.clock {
+  color: #000;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  box-shadow: 1px 1px 5px 1px #0005; 
+  border-radius: 50%;
+}
+
+:hover.section {
+  animation-play-state: paused;
+}
+.section:before {
+  top: 0;
+  left:0;
+  content: attr(data-colr);
+  display:block;
+  position: fixed;
+  width:10em;
+  height:10em;
+  transform-origin: center;
+  
+  animation: spin 10s linear reverse infinite;}
+/* .section:after {
+  display:none;
+  
+ } */
+ :hover.section:before{
+   animation-play-state: paused;
+  border: 5px double #fff5;
+ }
+.section { 
+  /* clip-path: polygon(50% 100%, 0 0, 100% 0); */
+  border: 2px solid transparent;
+  background-blend-mode: luminosity;
+  width:8em;
+  height:4em;
+
+  /* opacity:var(--alpha); */
+  
+  }
+
+.colorWheel {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height:var(--size);
+  background:#0009;
+  opacity:var(--alpha1);
+  border: 12px solid yellow;
+  border-radius: 50%;
+  /* overflow: hidden; */
+  left: 50%;
+  top: 50%;
+  animation: spin 10s linear infinite; 
+  box-shadow:inset 0 0 10px;
+}
+.numbers {
+  margin: 0 auto;
+  padding:5px;
+  border: 1px solid var(--t);
+   }
+
+.circleInner {
+  background-size: cover;
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);  
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+
+  }
+}
+
+@keyframes bolt {
+  to {
+    transform: scale(1.5);
+
+  }
+}

@@ -1,0 +1,165 @@
+
+:root{
+--time:0deg;
+}
+body * {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+body {
+
+  margin: 0 auto;
+  background: rgba(128, 128, 128, 0.333);
+  overflow: hidden;
+  display: ms-grid;
+background:repeating-radial-gradient(white, rgba(255, 255, 255, 0.) yellow,tan);
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  transition:all 0.1s ease
+}
+
+/* .mainWrap,.colorWheel,.dial,.circleInner,.clock,.innerWrap,.numbers,.section{
+  position: absolute;
+  transform-origin: center;
+  display:flex;
+  margin:0 auto;
+} */
+.mainWrap {
+  --clradius:-50%;
+  --size: 50vw;
+  --t:transparent;
+  --numrot:0deg;
+  --numV:0deg;
+  --numH:0deg;
+  --alpha:0.5;
+  --alpha1:0.1;
+  display: grid;
+
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+}
+
+.innerWrap{
+  display:inherit;
+  place-content: center;
+  position: absolute;
+  background: transparent;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  bottom: 1em;
+}
+
+.dial,.circleInner{
+  left: 50%;
+  top: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%);
+  
+}
+.dial,.circleInner,
+.section,.clock,.bighand,.littlehand{
+  position: absolute;
+
+}
+.dial{
+  display: block;
+  background-color: transparent;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  border: 12px double #0005;
+  box-shadow: 1px 1px 15px #000; 
+
+}
+
+.clock{
+  color: #000;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: transparent;
+  box-shadow: 1px 1px 5px 1px #0005; 
+  border-radius: 50%;
+
+}
+
+.section{ 
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  border: 2px solid transparent;
+  background-blend-mode: luminosity;
+
+  opacity:var(--alpha);
+  
+  }
+.bighand{
+width:30%;
+height:0.25em;
+border:2px solid #000;
+left: 50%;
+  top: 50%;
+  transform-origin: left;
+  transform: translate(-50%, -50%);
+}
+.littlehand{
+  width:50%;
+  height:0.125em;
+  border:1px solid #000;
+  left: 50%;
+  top: 50%;
+  transform-origin: left;
+  transform: translate(-50%, -50%);
+}
+.colorWheel{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height:var(--size);
+  background:conic-gradient( 
+    red 6deg, orange 6deg 18deg, yellow 18deg 45deg, 
+    green 45deg 110deg, blue 110deg 200deg, purple 200deg);
+  opacity:var(--alpha1);
+  border: 12px solid yellow;
+  border-radius: 50%;
+
+  transform-origin: center;
+  transform:rotateZ(var(--time))rotateX(0deg)rotateY(0deg);
+  
+  /* overflow: hidden; */
+  /* animation: spin 10s linear infinite;  */
+  box-shadow:inset 0 0 10px;
+}
+.numbers{
+  margin: 0 auto;
+  padding:5px;
+  border: 1px solid var(--t);
+   }
+
+.circleInner{
+  background-size: cover;
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);  
+}
+
+@keyframes spin{
+  to {
+    transform: rotate(360deg);
+
+  }
+}
+
+@keyframes bolt{
+  to {
+    transform: scale(1.5);
+
+  }
+}

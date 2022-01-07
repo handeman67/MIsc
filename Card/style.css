@@ -1,0 +1,184 @@
+*html {
+  box-sizing: border-box;
+}
+
+.wrap {
+  overflow: hidden;
+  --width: 100%;
+  --height: 100%;
+  --mainbkg: rgb(93, 93, 93);
+  --secondary: #abceaf;
+  --half: calc(var(--width) / 2 * 0.9);
+  --gradient1: linear-gradient(25deg,
+      darkkhaki,
+      #00000044,
+      darkkhaki,
+      #00000044);
+  --gradient: linear-gradient(to top,
+      var(--secondary) 55%,
+      #abceaf65,
+      #00000000);
+
+  position: absolute;
+  margin: 0 auto;
+  padding: 6%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient1);
+  background-size: 600% 600%;
+  animation: GradientBackground 10s ease infinite;
+}
+
+.card {
+  margin: 0 auto;
+  position: relative;
+  min-width: 95%;
+  min-height: 99%;
+  text-align: center;
+  background: var(--secondary);
+  overflow: hidden;
+  border-radius: 10px;
+  border: 0.1rem solid #111100;
+}
+p{
+  padding:0.5rem;
+}
+#display {
+  padding: 0.5em;
+  border: 0.5rem solid #11110055;
+}
+
+.display {
+  margin: 0 auto;
+   position: relative;
+  min-width: 350px;
+  min-height: 550px;
+  text-align: center;
+  transform: translate3d(-25% -25%);
+  width: var(--half);
+  height: var(--half);
+  background-size: cover;
+  background: var(--secondary);
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: inset 1px 1px 8px 2px #00000055, 1px 1px 8px 2px #00000055
+}
+
+.top {
+  width: 50%;
+
+  border-top: 2px double var(--mainbkg);
+}
+
+.topText {
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  color: red;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%);
+  bottom: 0;
+}
+
+canvas {
+  position: absolute;
+  bottom: 0;
+  transform: translate(-50%);
+}
+
+.read:hover {
+  color: blue;
+}
+
+.read {
+  color: #000000;
+  cursor: pointer;
+  text-align: center;
+  text-shadow: 1px 1px 6px #00000055;
+  position: absolute;
+  z-index: 100;
+  transform: translate(-50%);
+  top: 55%;
+  transition: 3s ease-in-out;
+}
+
+.read-more {
+  position: absolute;
+  background: var(--gradient);
+  color: antiquewhite;
+  text-shadow: 3px 3px 5px 2px #00000055;
+  transform: translate(-50%);
+  bottom: 20px;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  cursor: grab;
+  opacity: 1;
+  transition: height 3s;
+}
+
+.animate {
+  animation: open 1s ease-in-out forwards;
+}
+
+.adjust {
+  animation: adjust 1s ease forwards;
+}
+
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes float {
+  0% {
+    object-position: 150px 350px;
+  }
+
+  20% {
+    object-position: 100px 300px;
+  }
+
+  50% {
+    object-position: 0px 320px;
+  }
+
+  75% {
+    object-position: -125px 359px;
+  }
+
+  100% {
+    object-position: -525px 300px;
+  }
+}
+
+@keyframes adjust {
+  to {
+    top: 95%;
+  }
+}
+
+@keyframes open {
+  to {
+    height: 0;
+  }
+}
+
+@keyframes close {
+  to {
+
+    height: 50%;
+  }
+}
