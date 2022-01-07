@@ -1,8 +1,6 @@
 
 # handeman67.github.io
-for my games
 
-<a href="http://handeman67.github.io"> <h1>For my games</h1></a>
 
   <a href="/3dcss"> <div class="lnkbutton"><h1>3D_css_House</h1></div></a>
   <a href="/Card"> <div class="lnkbutton"><h1>Card</h1></div></a>
