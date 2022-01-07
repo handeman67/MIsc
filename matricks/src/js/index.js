@@ -9,8 +9,8 @@ var orbitcontrols;
     var zsize=5;
 var adds = [];
 
-init();
-animate();
+
+
 
 function init() {
 

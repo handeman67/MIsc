@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * jscolor - JavaScript Color Picker
  *
@@ -1767,7 +1766,6 @@ return jsc.jscolor
 
 
 })() }
-=======
 /**
  * jscolor - JavaScript Color Picker
  *
@@ -3536,4 +3534,3 @@ return jsc.jscolor
 
 
 })() }
->>>>>>> 9d933a718cd310636e7bf4dc82eeaa36319d80f0

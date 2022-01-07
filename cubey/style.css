@@ -1,7 +1,7 @@
 :root{
-  --Size:80em;
+  --Size:80;
   --IMG:./carpenterwNail.png;
-  --initValue:0deg;
+  --initValue:0;
   --perspect:650px;
   --f-shadow:inset 1 0 1 1px rgba(0, 0, 0, 0.8);
   --Xdeg:0deg;
@@ -52,7 +52,7 @@ img{
     margin: -40em 0 0 -40em;
 
   
-    transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));
+    transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg))scale(var(--Size));
     -webkit-transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));
     -moz-transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));
     -ms-transform:rotateX(var(--Xdeg)) rotateY(var(--Ydeg)) rotateZ(var(--Zdeg));

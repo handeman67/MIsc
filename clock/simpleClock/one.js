@@ -104,11 +104,11 @@ function preload() {
    cl=build();
 }
 function build(){
-   this.img=new container(0,0,loadImage('/simpleClock/images/purzen_Clock_face_web.webp'));
-   this.sechand = new container(0, 0, loadImage('/simpleClock/images/modern_s.png'));
-   this.minhand = new container(0, 0, loadImage('/simpleClock/images/modern_m.png'));
-   this.hrhand = new container(0, 0, loadImage('/simpleClock/images/modern_h.png'));
-   this.millhand = new container(0, 0,loadImage('/simpleClock/images/modern_dot.png'));
+   this.img=new container(0,0,loadImage('/clock/simpleClock/images/purzen_Clock_face_web.webp'));
+   this.sechand = new container(0, 0, loadImage('/clock/simpleClock/images/modern_s.png'));
+   this.minhand = new container(0, 0, loadImage('/clock/simpleClock/images/modern_m.png'));
+   this.hrhand = new container(0, 0, loadImage('/clock/simpleClock/images/modern_h.png'));
+   this.millhand = new container(0, 0,loadImage('/clock/simpleClock/images/modern_dot.png'));
 return this;
 }
 
